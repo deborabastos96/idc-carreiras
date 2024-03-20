@@ -1,0 +1,81 @@
+.cta-newsletter {
+  filter: url("#goo");
+
+  &__content {
+    padding: 8rem 0 12rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.9),
+        rgba($color-primary, 0.9)
+      ),
+      url("../../img/background-cta-newsletter-1x.webp");
+    background-size: cover;
+    background-position: center;
+    border-radius: $box-border-radius;
+    box-shadow: $shadow-big;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    }
+
+    @include respond(phone) {
+      padding: 8rem 4rem 12rem 4rem;
+    }
+  }
+
+  & h3 {
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50rem;
+    margin: 0 auto;
+    border: 1px solid $color-primary-light;
+    border-radius: $default-border-radius;
+    box-shadow: $shadow-small;
+    padding: 1rem;
+    padding-left: 2rem;
+    background-color: $color-primary-light;
+
+    @include respond(phone) {
+      width: 34rem;
+    }
+
+    & input {
+      flex-grow: 2;
+      background-color: inherit;
+      width: 32rem;
+      font-size: 1.8rem;
+      font-family: inherit;
+      color: $color-primary-dark;
+      border: none;
+
+      @include respond(tab-port) {
+        width: 26rem;
+      }
+
+      @include respond(tab-small) {
+        font-size: 1.6rem;
+      }
+
+      @include respond(phone) {
+        width: 23rem;
+      }
+    }
+  }
+
+  &__form input::placeholder {
+    color: inherit;
+  }
+
+  & *:focus {
+    outline: none;
+    /*  box-shadow: 0 0 0 0.2rem rgba(253, 242, 233, 0.5); */
+  }
+}

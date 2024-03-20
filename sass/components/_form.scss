@@ -1,0 +1,49 @@
+.form-box {
+  box-shadow: $shadow-big;
+  border-radius: $box-border-radius;
+  padding: 4rem;
+
+  @include respond(tab-small) {
+    margin-top: 4rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  & input,
+  & select,
+  & textarea {
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 0.8rem 1rem;
+    border-radius: $default-border-radius;
+    border: 1px solid $color-grey-light-3;
+    width: 100%;
+  }
+
+  & select {
+    color: $color-grey-dark-3;
+  }
+
+  & option {
+    padding: 0 0.5rem;
+  }
+
+  & *:focus {
+    outline: none;
+  }
+
+  & textarea {
+    height: 10rem;
+  }
+}
+
+#livres-adm,
+#livres-mkt,
+#livres-rh,
+#livres-imobiliaria {
+  display: none;
+}

@@ -1,0 +1,209 @@
+.hero {
+  background-color: $color-secondary-light;
+  border-radius: $box-border-radius;
+  padding: 4rem;
+  background-image: linear-gradient(to right, rgba(#0f2804, 0.6) 100%),
+    url("../../img/hero.jpg");
+  background-size: cover;
+  background-position: center center;
+
+  & h2 {
+    display: inline-block;
+    background-color: $color-secondary;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    border-top-left-radius: 0;
+  }
+
+  & h3 {
+    margin-bottom: 0;
+  }
+
+  &__text-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    @include respond(tab-port) {
+      gap: 2rem;
+    }
+
+    @include respond(tab-small) {
+      display: grid;
+      row-gap: 0;
+    }
+
+    & p {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      font-weight: 700;
+      text-shadow: 0 0 1.2rem rgba($color-white, 0.5);
+      color: $color-white;
+
+      @include respond(tab-port) {
+        font-size: 2.8rem;
+      }
+
+      @include respond(tab-small) {
+        font-size: 2.4rem;
+      }
+    }
+
+    & p:nth-child(2) {
+      font-size: 10rem;
+    }
+
+    & span {
+      font-size: 2rem;
+      font-weight: 400;
+
+      @include respond(tab-small) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-2 {
+      display: inline-block;
+      background-color: $color-secondary;
+      color: #009d30;
+      line-height: 1.2;
+      font-size: 1.4rem;
+      padding: 1rem 2rem;
+      border-radius: 3rem;
+      border-bottom-right-radius: 0;
+
+      @include respond(tab-small) {
+        font-size: 1.2rem;
+      }
+
+      & h3 {
+        color: #009d30;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 1;
+        font-size: 4rem;
+
+        @include respond(tab-small) {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+/* .hero {
+  background-color: $color-secondary-light;
+  border-radius: $box-border-radius;
+  padding: 4rem 10rem 0 10rem;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary, 0.5) 0%,
+      rgba($color-primary-dark, 0.15) 50%
+    ),
+    url("../../img/background-eja-cta-2x.webp");
+  background-size: cover;
+
+  @include respond(tab-land) {
+    padding: 4rem 6rem 0 6rem;
+  }
+
+  @include respond(tab-small) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary, 0.5),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url("../../img/background-eja-cta-2x.webp");
+  }
+
+  @include respond(phone) {
+    padding: 4rem 4rem 0 4rem;
+  }
+
+  &__text-box {
+    & p {
+      font-size: 1.6rem;
+      color: $color-primary-light;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
+
+    & .btn {
+      @include respond(phone) {
+        margin: 1rem !important;
+        margin-top: 0 !important;
+      }
+
+      &--outline {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+
+  &-corporativo {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary, 0.5) 0%,
+        rgba($color-primary-dark, 0.15) 50%
+      ),
+      url("../../img/background-eja-cta-2x.webp");
+    transform: scaleX(-1);
+    background-size: 115%;
+
+    @include respond(tab-land) {
+      padding: 3rem 3rem 0 3rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 3rem 2rem 0 2rem;
+    }
+
+    @include respond(tab-small) {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-primary, 0.5),
+          rgba($color-primary-dark, 0.8)
+        ),
+        url("../../img/background-eja-cta-2x.webp");
+      padding: 2rem 4rem 2rem 4rem;
+    }
+
+    @include respond(phone) {
+      padding: 1rem 4rem 3rem 4rem;
+    }
+
+    & p {
+      margin-bottom: 2rem !important;
+
+      @include respond(tab-port) {
+        margin-bottom: 1.2rem !important;
+      }
+
+      @include respond(tab-small) {
+        margin-bottom: 4rem !important;
+      }
+    }
+  }
+
+  &__content {
+    transform: scaleX(-1);
+  }
+
+  &__img {
+    width: 80%;
+    height: auto;
+
+    @include respond(tab-small) {
+      display: none;
+    }
+
+    &-box {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+} */

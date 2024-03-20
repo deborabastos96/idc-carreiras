@@ -1,0 +1,33 @@
+.list {
+  list-style: none;
+
+  &-item {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    line-height: 1.7;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-icon {
+    min-width: 3rem;
+    min-height: 3rem;
+    color: $color-secondary-dark;
+  }
+
+  &--3-cols {
+    column-count: 3;
+
+    @include respond(tab-small) {
+      column-count: 2;
+    }
+
+    @include respond(phone) {
+      column-count: 1;
+    }
+  }
+}

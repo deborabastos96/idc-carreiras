@@ -1,0 +1,30 @@
+.cta-eja {
+  &__container {
+    background-image: linear-gradient(
+        to left,
+        rgba($color-primary-dark, 0.25),
+        rgba($color-primary-dark, 0.5) 10%
+      ),
+      url(../../img/background-eja-cta-2x.webp);
+    border-radius: $box-border-radius;
+    box-shadow: $shadow-big;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  &__text-box {
+    padding-right: 6rem;
+
+    @include respond(tab-land) {
+      padding: 4rem 6rem 4rem 0;
+    }
+
+    @include respond(phone) {
+      padding: 0 4rem 4rem 4rem;
+    }
+  }
+}

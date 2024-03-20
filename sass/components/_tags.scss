@@ -1,0 +1,47 @@
+.tags {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+
+  &-posts {
+    gap: 0.8rem;
+  }
+
+  &-single {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: $color-grey-dark-3;
+  border-radius: 100px;
+  font-weight: 700;
+  background-color: $color-secondary;
+
+  &--adm {
+    background-color: lighten($color-adm-main, 7%);
+  }
+
+  &--mkt {
+    background-color: lighten($color-mkt-main, 7%);
+  }
+
+  &--rh {
+    background-color: lighten($color-rh-main, 7%);
+  }
+
+  &--imob {
+    background-color: $color-primary-dark;
+    color: $color-primary-light;
+  }
+
+  &-posts {
+    font-size: 1.6rem;
+    padding: 0.4rem 1.2rem;
+  }
+}

@@ -1,0 +1,221 @@
+.cursos {
+  & p:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
+
+  &-video {
+    width: 100%;
+
+    @include respond(tab-small) {
+      grid-row: 1;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+
+    @include respond(tab-small) {
+      width: 50%;
+      margin-bottom: 4rem;
+    }
+
+    @include respond(phone) {
+      width: 70%;
+    }
+
+    &-box {
+      text-align: center;
+    }
+
+    &-video {
+      width: 100%;
+      height: auto;
+      border-radius: $box-border-radius;
+      box-shadow: $shadow-big;
+    }
+  }
+
+  &__metodologia {
+    @include respond(tab-small) {
+      grid-row: 2;
+      margin-top: 3rem;
+    }
+  }
+}
+
+.comprar {
+  border-radius: $box-border-radius;
+  box-shadow: $shadow-big;
+  background-size: contain;
+  background-position: right bottom;
+  overflow: hidden;
+
+  &--adm {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 1) 0,
+        rgba($color-white, 1) 45%,
+        rgba($color-white, 0.9) 50%,
+        rgba($color-adm-main, 0.45) 50%,
+        rgba($color-adm-main, 0.75) 80%
+      ),
+      url(../../img/cursos/administracao-2x.jpg);
+
+    @include respond(tab-small) {
+      background-image: linear-gradient(
+          185deg,
+          rgba($color-white, 1) 0,
+          rgba($color-white, 1) 45%,
+          rgba($color-white, 0.9) 55%,
+          rgba($color-adm-main, 0.45) 55%,
+          rgba($color-adm-main, 0.75) 80%
+        ),
+        url(../../img/cursos/administracao-2x.jpg);
+      height: 72rem;
+    }
+
+    @include respond(phone) {
+      background-image: linear-gradient(
+          185deg,
+          rgba($color-white, 1) 0,
+          rgba($color-white, 1) 45%,
+          rgba($color-white, 0.9) 65%,
+          rgba($color-adm-main, 0.45) 65%,
+          rgba($color-adm-main, 0.75) 80%
+        ),
+        url(../../img/cursos/administracao-2x.jpg);
+      height: 62rem;
+    }
+  }
+
+  &--mkt {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 1) 0,
+        rgba($color-white, 1) 45%,
+        rgba($color-white, 0.9) 50%,
+        rgba($color-mkt-main, 0.45) 50%,
+        rgba($color-mkt-main, 0.75) 80%
+      ),
+      url(../../img/cursos/marketing-2x.jpg);
+
+    @include respond(tab-small) {
+      background-image: linear-gradient(
+          185deg,
+          rgba($color-white, 1) 0,
+          rgba($color-white, 1) 45%,
+          rgba($color-white, 0.9) 55%,
+          rgba($color-mkt-main, 0.45) 55%,
+          rgba($color-mkt-main, 0.75) 80%
+        ),
+        url(../../img/cursos/marketing-2x.jpg);
+      height: 72rem;
+    }
+
+    @include respond(phone) {
+      background-image: linear-gradient(
+          185deg,
+          rgba($color-white, 1) 0,
+          rgba($color-white, 1) 45%,
+          rgba($color-white, 0.9) 65%,
+          rgba($color-mkt-main, 0.45) 65%,
+          rgba($color-mkt-main, 0.75) 80%
+        ),
+        url(../../img/cursos/marketing-2x.jpg);
+      height: 62rem;
+    }
+  }
+
+  &--rh {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 1) 0,
+        rgba($color-white, 1) 45%,
+        rgba($color-white, 0.9) 50%,
+        rgba($color-rh-main, 0.45) 50%,
+        rgba($color-rh-main, 0.75) 80%
+      ),
+      url(../../img/cursos/recursos-humanos-2x.jpg);
+
+    @include respond(tab-small) {
+      background-image: linear-gradient(
+          185deg,
+          rgba($color-white, 1) 0,
+          rgba($color-white, 1) 45%,
+          rgba($color-white, 0.9) 55%,
+          rgba($color-rh-main, 0.45) 55%,
+          rgba($color-rh-main, 0.75) 80%
+        ),
+        url(../../img/cursos/recursos-humanos-2x.jpg);
+      height: 72rem;
+    }
+
+    @include respond(phone) {
+      background-image: linear-gradient(
+          185deg,
+          rgba($color-white, 1) 0,
+          rgba($color-white, 1) 45%,
+          rgba($color-white, 0.9) 65%,
+          rgba($color-rh-main, 0.45) 65%,
+          rgba($color-rh-main, 0.75) 80%
+        ),
+        url(../../img/cursos/recursos-humanos-2x.jpg);
+      height: 62rem;
+    }
+  }
+
+  &--imob {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 1) 0,
+        rgba($color-white, 1) 45%,
+        rgba($color-white, 0.9) 50%,
+        rgba($color-primary-dark, 0.45) 50%,
+        rgba($color-primary-dark, 0.75) 80%
+      ),
+      url(../../img/cursos/imobiliaria-2x.jpg);
+
+    @include respond(tab-small) {
+      background-image: linear-gradient(
+          185deg,
+          rgba($color-white, 1) 0,
+          rgba($color-white, 1) 45%,
+          rgba($color-white, 0.9) 55%,
+          rgba($color-primary-dark, 0.45) 55%,
+          rgba($color-primary-dark, 0.75) 80%
+        ),
+        url(../../img/cursos/imobiliaria-2x.jpg);
+      height: 72rem;
+    }
+
+    @include respond(phone) {
+      background-image: linear-gradient(
+          185deg,
+          rgba($color-white, 1) 0,
+          rgba($color-white, 1) 45%,
+          rgba($color-white, 0.9) 65%,
+          rgba($color-primary-dark, 0.45) 65%,
+          rgba($color-primary-dark, 0.75) 80%
+        ),
+        url(../../img/cursos/imobiliaria-2x.jpg);
+      height: 62rem;
+    }
+  }
+
+  &__content {
+    padding: 8rem 4rem;
+    height: 43rem;
+
+    @include respond(tab-small) {
+      padding: 4rem 4rem;
+      align-self: flex-start;
+    }
+
+    @include respond(phone) {
+      padding: 4rem 2rem;
+      align-self: flex-start;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.logos {
+  display: flex;
+  justify-content: space-around;
+
+  @include respond(tab-small) {
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__img {
+    height: 5.5rem;
+
+    &-grupobemtevi {
+      width: 25rem;
+      height: auto;
+      margin-bottom: 4rem;
+    }
+
+    &-bemtevi {
+      width: 7.8rem;
+
+      @include respond(tab-small) {
+        width: 6.383rem;
+      }
+    }
+
+    &-idc {
+      width: 16.2rem;
+
+      @include respond(tab-small) {
+        width: 13.255rem;
+      }
+    }
+
+    &-democrata {
+      width: 16.922rem;
+
+      @include respond(tab-small) {
+        width: 13.845rem;
+      }
+    }
+
+    &-republica {
+      width: 21.411rem;
+
+      @include respond(tab-small) {
+        width: 17.519rem;
+      }
+    }
+
+    &-corporativo {
+      width: 14.473rem;
+
+      @include respond(tab-small) {
+        width: 11.841rem;
+      }
+    }
+
+    @include respond(tab-small) {
+      height: 4.5rem;
+    }
+  }
+
+  &__bemtevi {
+    @include respond(tab-small) {
+      grid-column: span 3;
+    }
+  }
+
+  &__idc {
+    @include respond(tab-small) {
+      grid-column: span 6;
+      grid-row: 3;
+    }
+  }
+
+  &__democrata {
+    @include respond(tab-small) {
+      grid-column: span 3;
+    }
+  }
+
+  &__republica {
+    @include respond(tab-small) {
+      grid-column: span 3;
+    }
+  }
+
+  &__corporativo {
+    @include respond(tab-small) {
+      grid-column: 4 / 7;
+      grid-row: 1 / 2;
+    }
+  }
+}

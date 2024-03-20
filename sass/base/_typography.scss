@@ -1,0 +1,101 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-grey-dark-3;
+}
+
+.heading-primary {
+  font-family: "Oswald", sans-serif;
+  color: #009d30;
+  padding-bottom: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 6rem;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+
+  @include respond(tab-small) {
+    font-size: 4rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 1rem;
+  color: $color-primary;
+
+  @include respond(tab-port) {
+    letter-spacing: 0.5px;
+  }
+}
+
+.heading-tertiary {
+  color: $color-grey-dark-3;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 6rem;
+  letter-spacing: -1.5px;
+}
+
+.heading-quaternary {
+  color: $color-grey-dark-3;
+  padding-bottom: 2rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+  line-height: 1.4;
+  transition: all 0.3s;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  @include respond(tab-land) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 2.2rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.8rem;
+}
+
+.link,
+.link:link,
+.link:visited {
+  color: $color-primary;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  border-bottom: 1px solid transparent;
+}
+
+.link--posts:link,
+.link--posts:visited {
+  font-size: 1.5rem;
+
+  @include respond(tab-land) {
+    font-size: 1.3rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+}

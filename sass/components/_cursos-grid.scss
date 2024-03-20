@@ -1,0 +1,32 @@
+.curso {
+  box-shadow: $shadow-big;
+  border-radius: $box-border-radius;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    padding: 2rem 3rem 0 3rem;
+
+    & p {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__buttons {
+    padding: 0 3rem 3rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+
+    &--icon {
+      font-size: 2.2rem;
+    }
+  }
+}

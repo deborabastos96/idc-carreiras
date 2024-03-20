@@ -1,0 +1,36 @@
+.swiper {
+  &-slide {
+    height: 40rem;
+  }
+
+  &-wrapper {
+    height: auto;
+  }
+
+  &-controls {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: $color-primary;
+
+    &::after {
+      font-size: 1.6rem !important;
+      color: $color-grey-light-2;
+    }
+  }
+
+  &-pagination {
+    &-bullet {
+      background-color: $color-grey-light-2;
+    }
+  }
+}
+
+.article {
+  box-shadow: $shadow-big;
+  border-radius: $box-border-radius;
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+  }
+}

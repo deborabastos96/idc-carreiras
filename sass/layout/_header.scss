@@ -1,0 +1,313 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 9.6rem;
+  padding: 2rem 4.8rem;
+  position: relative;
+
+  &__logo {
+    height: 7rem;
+    width: 16.041rem;
+    display: block;
+
+    @include respond(tab-port) {
+      height: 5.7rem;
+      width: 13.063rem;
+    }
+
+    @include respond(tab-small) {
+      height: 7rem;
+      width: 16.041rem;
+    }
+
+    &-pages {
+      height: 7rem;
+      width: 18.239rem;
+
+      @include respond(tab-land) {
+        height: 5.4rem;
+        width: 14.142rem;
+      }
+
+      @include respond(tab-port) {
+        height: 5rem;
+        width: 13.094rem;
+      }
+
+      @include respond(tab-small) {
+        height: 7rem;
+        width: 18.239rem;
+      }
+    }
+  }
+
+  &__nav {
+    @include respond(tab-small) {
+      background-color: $color-white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25rem;
+      height: 100vh;
+      transform: translateX(100%);
+      margin-top: 9.6rem;
+      padding: 3rem 3rem 11rem 3rem;
+      border-top: solid 1px $color-grey-light-2;
+      border-bottom: solid 1px $color-grey-light-2;
+
+      transition: all 0.5s;
+
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 4rem;
+
+    & :nth-child(5) {
+      @include respond(tab-small) {
+        order: -1;
+      }
+    }
+
+    @include respond(tab-land) {
+      gap: 3rem;
+    }
+
+    @include respond(tab-small) {
+      flex-direction: column;
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-grey-dark-3;
+      font-size: 1.7rem;
+      font-weight: 700;
+      transition: all 0.3s;
+      width: 100%;
+
+      @include respond(tab-land) {
+        font-size: 1.5rem;
+      }
+
+      @include respond(tab-small) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-submenu:link,
+    &-submenu:visited {
+      font-size: 1.5rem;
+      padding: 0.8rem;
+      border-radius: $default-border-radius;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-submenu:hover,
+    &-submenu:active {
+      background-color: lighten($color-grey-light-1, 1%);
+    }
+
+    &-submenu-corp:link,
+    &-submenu-corp:visited {
+      font-size: 1.35rem;
+    }
+
+    &-cursos-tecnicos {
+      position: relative;
+
+      &_hover:hover .header__submenu-cursos-tecnicos {
+        display: block;
+      }
+    }
+
+    &-idc-corporativo {
+      position: relative;
+
+      &_hover:hover .header__submenu-idc-corporativo {
+        display: block;
+      }
+    }
+
+    &-adm {
+      position: relative;
+
+      &_hover:hover .header__submenu-adm {
+        display: block;
+      }
+    }
+
+    &-mkt {
+      position: relative;
+
+      &_hover:hover .header__submenu-mkt {
+        display: block;
+      }
+    }
+
+    &-rh {
+      position: relative;
+
+      &_hover:hover .header__submenu-rh {
+        display: block;
+      }
+    }
+
+    &-imob {
+      position: relative;
+
+      &_hover:hover .header__submenu-imob {
+        display: block;
+      }
+    }
+
+    &-cursos {
+      &:link,
+      &:visited {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 1rem 0;
+
+        @include respond(tab-small) {
+          justify-content: space-between;
+          width: 150px;
+          padding: 0;
+        }
+      }
+    }
+
+    &-icon {
+      font-size: 1.8rem;
+
+      &[name="chevron-up-outline"] {
+        display: none;
+      }
+
+      @include respond(tab-small) {
+        font-size: 2rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+
+    &-cta:link,
+    &-cta:visited {
+      padding: 0.6rem 2rem;
+      border-radius: $default-border-radius;
+      color: $color-secondary-light;
+      background-color: darken($color-secondary, 5%);
+    }
+
+    &-cta:hover,
+    &-cta:active {
+      background-color: $color-secondary-dark;
+    }
+  }
+
+  &__submenu {
+    display: none;
+    position: absolute;
+    text-decoration: none;
+    list-style: none;
+    border-radius: $default-border-radius;
+    background-color: $color-white;
+    padding: 2rem;
+    min-width: 25rem;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.07);
+    z-index: 999999;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+
+    &-livres {
+      left: 100%;
+      top: 0;
+      width: 40rem;
+
+      @include respond(tab-small) {
+        width: auto;
+      }
+    }
+
+    &-mobile {
+      & + ul {
+        display: block;
+        position: relative;
+        padding: 0;
+        box-shadow: none;
+        min-width: auto;
+        border-radius: 0;
+        margin: 1.5rem 0 1.5rem 0;
+        left: 0;
+      }
+
+      & .header__item-icon[name="chevron-down-outline"] {
+        display: none;
+      }
+
+      & .header__item-icon[name="chevron-up-outline"] {
+        display: block;
+      }
+    }
+
+    &-imob {
+      width: 32rem;
+
+      @include respond(tab-small) {
+        width: auto;
+      }
+    }
+  }
+}
+
+.nav {
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: $color-grey-dark-2;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-grey-dark-3;
+    }
+
+    &-priv {
+      &:link,
+      &:visited {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__heading {
+    font-weight: 700;
+  }
+}

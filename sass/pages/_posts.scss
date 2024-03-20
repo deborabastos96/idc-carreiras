@@ -1,0 +1,11 @@
+.section-post {
+  & p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  & article {
+    @include respond(tab-small) {
+      margin-bottom: 6rem;
+    }
+  }
+}

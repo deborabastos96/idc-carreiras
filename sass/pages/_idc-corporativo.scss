@@ -1,0 +1,19 @@
+#administracao,
+#marketing,
+#recursos-humanos,
+#imobiliaria {
+  padding-top: 10.6rem;
+}
+
+.legislacao {
+  column-count: 2;
+  column-gap: 6rem;
+
+  & p:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  @include respond(tab-small) {
+    column-count: 1;
+  }
+}
